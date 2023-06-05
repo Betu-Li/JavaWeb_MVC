@@ -5,8 +5,6 @@
   Time: 22:49
   To change this template use File | Settings | File Templates.
 --%>
-<%@ page import="com.example.stu" %>
-<%@ page import="java.util.List" %>
 <%@ page import="com.example.stu.pojo.Page" %>
 <%@ page import="com.example.stu.pojo.Student" %>
 <%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>
@@ -22,7 +20,7 @@
             height: 550px;
             border: 4px rgb(237, 237, 237) solid;
             border-radius: 5px;
-            background-image: url("图片链接");
+            background-image: url("/jpg/backg.jpg");
             margin: auto;
             background-size: auto;
         }
@@ -101,7 +99,7 @@
                 <th><h3>姓名</h3></th>
                 <th><h3>性别</h3></th>
                 <th><h3>年龄</h3></th>
-                <th><h3>电话</h3></th>
+                <th><h3>分数</h3></th>
 
             </tr>
             <%
@@ -115,7 +113,7 @@
                 <td><%=student.getSname() %></td>
                 <td><%=student.getSex() %></td>
                 <td><%=student.getAge() %></td>
-                <td><%=student.getPhone() %></td>
+                <td><%=student.getgrades() %></td>
             </tr>
             <%
                 }
@@ -152,7 +150,7 @@
             }
         %>
 
-        <a href = "main.jsp">返回</a>
+        <a href = "main1.jsp">返回</a>
     </div>
 </div>
 </body>

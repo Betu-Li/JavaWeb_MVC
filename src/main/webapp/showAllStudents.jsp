@@ -19,7 +19,7 @@
       height: 700px;
       border: 4px rgb(237, 237, 237) solid;
       border-radius: 5px;
-      background-image: url("图片链接");
+      background-image: url("/jpg/backg.jpg");
       margin: auto;
       background-size: auto;
     }
@@ -95,7 +95,7 @@
         <th><h3>姓名</h3></th>
         <th><h3>性别</h3></th>
         <th><h3>年龄</h3></th>
-        <th><h3>电话</h3></th>
+        <th><h3>分数</h3></th>
         <th><h3>操作</h3></th>
       </tr>
       <%
@@ -109,7 +109,7 @@
         <td><%=s.getSname() %></td>
         <td><%=s.getSex() %></td>
         <td><%=s.getAge() %></td>
-        <td><%=s.getPhone() %></td>
+        <td><%=s.getgrades() %></td>
         <td>
           <a href = "DeleteServlet?sno=<%=s.getSno() %>">删除</a>
           <a href = "QueryStudentBySnoServlet?sno=<%=s.getSno()%>">修改</a>
