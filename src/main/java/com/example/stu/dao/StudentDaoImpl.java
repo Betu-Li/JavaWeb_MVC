@@ -114,18 +114,20 @@ public class StudentDaoImpl implements StudentDao {
     }
 
 
-    public List<Student> queryStudentByPage(int current, int pageSize) {
+    public List<Student> queryStudentByPage(int current, int pageSize) {//查询表
         try {
-            Class.forName(DBTools.DRIVER_CLASS);// 加载驱动
+            Class.forName(DBTools.DRIVER_CLASS);
 
             conn = DriverManager.getConnection(DBTools.CONN_STR, DBTools.USRENAME, DBTools.PWD);
-            // 3:执行sql语句，完成对数据库中表的数据的增删该查。必须创建一个语句对象（执行sql语句的）
+
             st = conn.createStatement();
 
-            int startPosition = current * pageSize;
+            int startPosition = current * pageSize;//开始位置
 
             String sqlStr = "select * from student limit " + startPosition + "," + pageSize;
+
             rs = st.executeQuery(sqlStr);
+
             List<Student> allStudents = new ArrayList<Student>();
             while (rs.next()) {
                 int _sno = rs.getInt(1);
