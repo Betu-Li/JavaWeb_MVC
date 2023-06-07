@@ -63,6 +63,7 @@ public class StudentServiceImpl implements StudentService {
         return dao.getTotalCount();
     }
 
+    //添加学生信息
     @Override
     public int addStudent(Student student) {
         return dao.addStudent(student);

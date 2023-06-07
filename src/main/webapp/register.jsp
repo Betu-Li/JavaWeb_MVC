@@ -86,8 +86,6 @@
 
   </style>
 </head>
-
-</head>
 <body>
 <div class="mainDiv">
   <div class="titleDiv">学生信息管理平台</div>

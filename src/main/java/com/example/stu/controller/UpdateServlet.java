@@ -42,7 +42,6 @@ public class UpdateServlet extends HttpServlet {
         StudentService service = new StudentServiceImpl();
         service.updateStudentBySno(_sno,stu);
 
-        //3.跳转界面
         request.getRequestDispatcher("ShowAllStudentsServlet").forward(request, resp);
 
     }

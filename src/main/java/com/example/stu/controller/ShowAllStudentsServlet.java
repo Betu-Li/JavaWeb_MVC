@@ -20,6 +20,7 @@ public class ShowAllStudentsServlet extends HttpServlet{
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         StudentService service = new StudentServiceImpl();
         HttpSession  session =   request.getSession();
+
         List<Student> allStudents = service.getAllStudents();
         session.setAttribute("allStudents", allStudents);
         response.sendRedirect("showAllStudents.jsp");

@@ -16,16 +16,11 @@ public class StudentDaoImpl implements StudentDao {
 
     @Override
     public boolean login(int uid, String pwd) {
-        // 在这里需要连接数据库，根据int sno, String pwd这两个参数来查询student表
-        // jdbc
-        // 1:配置环境，下载数据库连接驱动jar文件，拷贝到项目中来
-        // 2:加载驱动，根据驱动创建数据库的连接对象
-
         try {
-            Class.forName(DBTools.DRIVER_CLASS);// 加载驱动
+            Class.forName(DBTools.DRIVER_CLASS);
 
             conn = DriverManager.getConnection(DBTools.CONN_STR, DBTools.USRENAME, DBTools.PWD);
-            // 3:执行sql语句，完成对数据库中表的数据的增删该查。必须创建一个语句对象（执行sql语句的）
+
             st = conn.createStatement();
 
             int count = 0;
@@ -50,10 +45,10 @@ public class StudentDaoImpl implements StudentDao {
     @Override
     public boolean Type(int uid, String pwd) {
         try {
-            Class.forName(DBTools.DRIVER_CLASS);// 加载驱动
+            Class.forName(DBTools.DRIVER_CLASS);
 
             conn = DriverManager.getConnection(DBTools.CONN_STR, DBTools.USRENAME, DBTools.PWD);
-            // 3:执行sql语句，完成对数据库中表的数据的增删该查。必须创建一个语句对象（执行sql语句的）
+
             st = conn.createStatement();
 
             int count = 0;
@@ -86,10 +81,9 @@ public class StudentDaoImpl implements StudentDao {
     @Override
     public List<Student> getAllStudents() {
         try {
-            Class.forName(DBTools.DRIVER_CLASS);// 加载驱动
-
+            Class.forName(DBTools.DRIVER_CLASS);
             conn = DriverManager.getConnection(DBTools.CONN_STR, DBTools.USRENAME, DBTools.PWD);
-            // 3:执行sql语句，完成对数据库中表的数据的增删该查。必须创建一个语句对象（执行sql语句的）
+
             st = conn.createStatement();
 
             String sqlStr = "select * from student";
@@ -155,10 +149,10 @@ public class StudentDaoImpl implements StudentDao {
     public int getTotalCount() {//查询总数据数
 
         try {
-            Class.forName(DBTools.DRIVER_CLASS);// 加载驱动
+            Class.forName(DBTools.DRIVER_CLASS);
 
             conn = DriverManager.getConnection(DBTools.CONN_STR, DBTools.USRENAME, DBTools.PWD);
-            // 3:执行sql语句，完成对数据库中表的数据的增删该查。必须创建一个语句对象（执行sql语句的）
+
             st = conn.createStatement();
             String sql = "select count(*) from student";
             rs = st.executeQuery(sql);
@@ -177,7 +171,7 @@ public class StudentDaoImpl implements StudentDao {
     public int addStudent(Student student) {
 
         try {
-            Class.forName(DBTools.DRIVER_CLASS);// 加载驱动
+            Class.forName(DBTools.DRIVER_CLASS);
 
             conn = DriverManager.getConnection(DBTools.CONN_STR, DBTools.USRENAME, DBTools.PWD);
             st = conn.createStatement();
@@ -197,7 +191,7 @@ public class StudentDaoImpl implements StudentDao {
     @Override
     public boolean addLogin(int uid, String pwd) {
         try {
-            Class.forName(DBTools.DRIVER_CLASS);// 加载驱动
+            Class.forName(DBTools.DRIVER_CLASS);
 
             conn = DriverManager.getConnection(DBTools.CONN_STR, DBTools.USRENAME, DBTools.PWD);
             st = conn.createStatement();
@@ -217,7 +211,7 @@ public class StudentDaoImpl implements StudentDao {
     @Override
     public Student deleteStudent(int sno) {
         try {
-            Class.forName(DBTools.DRIVER_CLASS);// 加载驱动
+            Class.forName(DBTools.DRIVER_CLASS);
             conn = DriverManager.getConnection(DBTools.CONN_STR, DBTools.USRENAME, DBTools.PWD);
             st = conn.createStatement();
             String sqlStr = "delete from student where sno = " + sno;
@@ -233,7 +227,7 @@ public class StudentDaoImpl implements StudentDao {
     @Override
     public Student queryStudentBySno(int sno) {
         try {
-            Class.forName(DBTools.DRIVER_CLASS);// 加载驱动
+            Class.forName(DBTools.DRIVER_CLASS);
 
             conn = DriverManager.getConnection(DBTools.CONN_STR, DBTools.USRENAME, DBTools.PWD);
 
@@ -262,11 +256,12 @@ public class StudentDaoImpl implements StudentDao {
     @Override
     public int updateStudentBySno(int sno, Student stu){
         try {
-            Class.forName(DBTools.DRIVER_CLASS);// 加载驱动
+            Class.forName(DBTools.DRIVER_CLASS);
             conn = DriverManager.getConnection(DBTools.CONN_STR, DBTools.USRENAME, DBTools.PWD);
             st = conn.createStatement();
+
             String sql = "update student set sname= '"+stu.getSname()+"', sex='"+stu.getSex()+"', age="+stu.getAge()+", grades='"+stu.getgrades()+"' where sno="+sno;
-            System.out.println(sql);
+          System.out.println(sql);
             int result = st.executeUpdate(sql);
 
         } catch (Exception e){

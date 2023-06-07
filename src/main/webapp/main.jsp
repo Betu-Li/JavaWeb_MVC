@@ -36,24 +36,24 @@
     .Navigation{
       width: 899px;
       height: 200px;
-      background-color:#59c2c5;
+      background-color:#ECECEC;
       opacity:0.8;
       text-align: center;
       line-height: 200px;
-      font-family: 楷体;
-
     }
 
-    a{
-      font-size:30px;
-      color:whitesmoke;
-      padding-left:20px;
+    .a1 {
+      background:#59c2c5;
+      color:#fff;
+      padding: 10px;
       text-decoration: none;
+      font-size: 16px;
+      line-height:30px;
+      border-radius:10px;
+      border:none;
     }
-
-    a:hover{
-      color: blue;
-      font-family: 隶书;
+    .a1:hover{
+      background-color: #3c96aa;
     }
 
   </style>
@@ -66,11 +66,16 @@
       session.setAttribute("loginErrorMessage", "您必须先登录才能访问主页！");
       response.sendRedirect("index.jsp");
     }
+    else if(session.getAttribute("login") == "type1")
+    {
+      session.setAttribute("loginErrorMessage", "您没有权限！");
+      response.sendRedirect("index.jsp");
+    }
   %>
   <div class="Navigation">
-    <a href="addStudent.jsp">添加学生</a>
-    <a href="ShowAllStudentsServlet">查看或修改所有学生信息</a>
-    <a href="QuitServlet">退出登录</a>
+    <a class="a1" href="addStudent.jsp">添加学生</a>
+    <a class="a1" href="ShowAllStudentsServlet">查看或修改所有学生信息</a>
+    <a class="a1" href="QuitServlet">退出登录</a>
   </div>
 </div>
 </body>

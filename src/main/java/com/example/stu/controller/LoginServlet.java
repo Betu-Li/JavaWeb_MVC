@@ -40,13 +40,17 @@ public class LoginServlet extends HttpServlet{
             boolean type = service.type(_uid, pwd);
 
             if (result) {
-                session.setAttribute("login", "log");
+
                 if (type) {
+                    session.setAttribute("login", "type0");
                     response.sendRedirect("main.jsp");
                 } else {
+                    session.setAttribute("login", "type1");
                     response.sendRedirect("main1.jsp");
                 }
             } else {
+                System.out.println("账号或密码错误！");
+                session.setAttribute("pwdError","账号或密码错误！");
                 response.sendRedirect("index.jsp");
             }
         }

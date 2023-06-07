@@ -73,6 +73,9 @@
             margin-bottom: 20px;
             margin-top: 10px;
         }
+        .login-btn:hover{
+            background-color: #3c96aa;
+        }
     </style>
 
 
@@ -110,6 +113,13 @@
                     if (register.equals("reg")) {
                         out.println("注册成功, 请登录！");
                     }
+                }
+            %>
+            <%
+                if(session.getAttribute("pwdError") != null){
+
+                    String pwdError = (String)session.getAttribute("pwdError");
+                    out.print(pwdError);
                 }
             %>
         </div>

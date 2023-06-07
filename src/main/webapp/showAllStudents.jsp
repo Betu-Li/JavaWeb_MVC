@@ -99,7 +99,6 @@
         <th><h3>操作</h3></th>
       </tr>
       <%
-
         List<Student> allStudents = (List<Student>)session.getAttribute("allStudents");
         for (int i = 0; i < allStudents.size(); i++) {
           Student s  = allStudents.get(i);

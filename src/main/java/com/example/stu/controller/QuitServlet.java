@@ -15,7 +15,7 @@ public class QuitServlet extends HttpServlet{
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse resp) throws ServletException, IOException {
         HttpSession  session =   request.getSession();
-        session.invalidate();//清空session对象中的所有属性数据内容
+        session.invalidate();
         resp.sendRedirect("index.jsp");
     }
 }

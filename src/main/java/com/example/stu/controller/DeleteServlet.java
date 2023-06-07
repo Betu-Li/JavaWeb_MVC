@@ -17,7 +17,6 @@ import java.io.IOException;
 public class DeleteServlet extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        //1.获取sno
         String sno = request.getParameter("sno");
 
         int _sno = 0;
@@ -25,10 +24,8 @@ public class DeleteServlet extends HttpServlet {
             _sno = Integer.parseInt(sno);
         }
 
-        //2.执行删除
         StudentService service = new StudentServiceImpl();
         Student stu = service.deleteStudent(_sno);
-        //3.跳转到列表页
         request.setAttribute("stu", stu);
         request.getRequestDispatcher("ShowAllStudentsServlet").forward(request,response);
     }
