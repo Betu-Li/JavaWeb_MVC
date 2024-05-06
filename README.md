@@ -96,19 +96,19 @@ INSERT INTO login(uid, pwd) VALUES(3, '6666');
 
 ### 三、后端设计：
 
-  ![image.png](学生成绩信息管理系统+7843534d-ba8b-4665-8850-9dd562912078/image 1.png)
+  ![image.png](学生成绩信息管理系统+7843534d-ba8b-4665-8850-9dd562912078/image1.png)
 
 ## 三、系统详细设计
 
 ### 一、登陆功能： 
 
-![image.png](学生成绩信息管理系统+7843534d-ba8b-4665-8850-9dd562912078/image 2.png)
+![image.png](学生成绩信息管理系统+7843534d-ba8b-4665-8850-9dd562912078/image2.png)
 
-![image.png](学生成绩信息管理系统+7843534d-ba8b-4665-8850-9dd562912078/image 3.png)
+![image.png](学生成绩信息管理系统+7843534d-ba8b-4665-8850-9dd562912078/image3.png)
 
-![image.png](学生成绩信息管理系统+7843534d-ba8b-4665-8850-9dd562912078/image 4.png)
+![image.png](学生成绩信息管理系统+7843534d-ba8b-4665-8850-9dd562912078/image4.png)
 
-![image.png](学生成绩信息管理系统+7843534d-ba8b-4665-8850-9dd562912078/image 5.png)
+![image.png](学生成绩信息管理系统+7843534d-ba8b-4665-8850-9dd562912078/image5.png)
 
 - 页面代码
 
@@ -280,9 +280,9 @@ public boolean login(int uid, String pwd) {
 
 ### 二、注册功能：
 
-  ![image.png](学生成绩信息管理系统+7843534d-ba8b-4665-8850-9dd562912078/image 6.png)
+  ![image.png](学生成绩信息管理系统+7843534d-ba8b-4665-8850-9dd562912078/image6.png)
 
-  ![image.png](学生成绩信息管理系统+7843534d-ba8b-4665-8850-9dd562912078/image 7.png)
+  ![image.png](学生成绩信息管理系统+7843534d-ba8b-4665-8850-9dd562912078/image7.png)
 
   ```HTML
     <form action = "RegisterServlet">
@@ -353,7 +353,7 @@ public boolean addLogin(int uid, String pwd) {
 
 - 管理员查询页面带修改、删除（功能）
 
-  ![image.png](学生成绩信息管理系统+7843534d-ba8b-4665-8850-9dd562912078/image 8.png)
+  ![image.png](学生成绩信息管理系统+7843534d-ba8b-4665-8850-9dd562912078/image8.png)
 
   ```HTML
   <%
@@ -444,9 +444,9 @@ public List<Student> getAllStudents() {
 
 - 查询结果分页显示
 
-  ![image.png](学生成绩信息管理系统+7843534d-ba8b-4665-8850-9dd562912078/image 9.png)
+  ![image.png](学生成绩信息管理系统+7843534d-ba8b-4665-8850-9dd562912078/image9.png)
 
-  ![image.png](学生成绩信息管理系统+7843534d-ba8b-4665-8850-9dd562912078/image 10.png)
+  ![image.png](学生成绩信息管理系统+7843534d-ba8b-4665-8850-9dd562912078/image10.png)
 
   ```HTML
 <body>
@@ -690,7 +690,7 @@ public int getTotalCount() {//查询总数据数
 
 ### 四、成绩信息添加：
 
-  ![image.png](学生成绩信息管理系统+7843534d-ba8b-4665-8850-9dd562912078/image 11.png)
+  ![image.png](学生成绩信息管理系统+7843534d-ba8b-4665-8850-9dd562912078/image11.png)
 
   ```HTML
 <div class="mainDiv">
@@ -770,7 +770,7 @@ public int getTotalCount() {//查询总数据数
 
 ### 五、成绩信息修改：
 
-  ![image.png](学生成绩信息管理系统+7843534d-ba8b-4665-8850-9dd562912078/image 12.png)
+  ![image.png](学生成绩信息管理系统+7843534d-ba8b-4665-8850-9dd562912078/image12.png)
 
   ```HTML
 <div class="mainDiv">
@@ -872,7 +872,7 @@ public class UpdateServlet extends HttpServlet {
 
 ### 六、成绩信息删除：
 
-  ![image.png](学生成绩信息管理系统+7843534d-ba8b-4665-8850-9dd562912078/image 13.png)
+  ![image.png](学生成绩信息管理系统+7843534d-ba8b-4665-8850-9dd562912078/image13.png)
 
   ```HTML
  <tr>
@@ -939,7 +939,7 @@ public class DeleteServlet extends HttpServlet {
 
 ### 七、退出登陆：
 
-  ![image.png](学生成绩信息管理系统+7843534d-ba8b-4665-8850-9dd562912078/image 14.png)
+  ![image.png](学生成绩信息管理系统+7843534d-ba8b-4665-8850-9dd562912078/image14.png)
 
   ```HTML
 <a class="a1" href="QuitServlet">退出登录</a>
@@ -968,45 +968,45 @@ public class QuitServlet extends HttpServlet{
 
   ### 一、登陆功能
 
-  ![image.png](学生成绩信息管理系统+7843534d-ba8b-4665-8850-9dd562912078/image 15.png)
+  ![image.png](学生成绩信息管理系统+7843534d-ba8b-4665-8850-9dd562912078/image15.png)
 
   验证账号密码功能，将登陆信息存入session，验证用户类型，不同的用户登陆后的页面不一样。不登录直接访问页面、或是普通用户直接管理员用户会重定向回这个界面并提示登陆
 
-  ![image.png](学生成绩信息管理系统+7843534d-ba8b-4665-8850-9dd562912078/image 16.png)
+  ![image.png](学生成绩信息管理系统+7843534d-ba8b-4665-8850-9dd562912078/image16.png)
 
-  ![image.png](学生成绩信息管理系统+7843534d-ba8b-4665-8850-9dd562912078/image 17.png)
+  ![image.png](学生成绩信息管理系统+7843534d-ba8b-4665-8850-9dd562912078/image17.png)
 
   ### 二、注册功能
 
-  ![image.png](学生成绩信息管理系统+7843534d-ba8b-4665-8850-9dd562912078/image 18.png)
+  ![image.png](学生成绩信息管理系统+7843534d-ba8b-4665-8850-9dd562912078/image18.png)
 
   表单填入信息后成功注册后会自动返回登陆页面，并提示注册成功
 
-  ![image.png](学生成绩信息管理系统+7843534d-ba8b-4665-8850-9dd562912078/image 19.png)
+  ![image.png](学生成绩信息管理系统+7843534d-ba8b-4665-8850-9dd562912078/image19.png)
 
   ### 三、查询功能
 
 - 分页展示所有学生的成绩信息
 
-![image.png](学生成绩信息管理系统+7843534d-ba8b-4665-8850-9dd562912078.assets/image 20.png)
+![image.png](学生成绩信息管理系统+7843534d-ba8b-4665-8850-9dd562912078.assets/image20.png)
 
 - 展示所有学生的信息
 
-![image.png](学生成绩信息管理系统+7843534d-ba8b-4665-8850-9dd562912078.assets/image 21.png)
+![image.png](学生成绩信息管理系统+7843534d-ba8b-4665-8850-9dd562912078.assets/image21.png)
 
 ### 四、信息编辑功能
 
 - 删除学生的成绩信息
 
-  ![image.png](学生成绩信息管理系统+7843534d-ba8b-4665-8850-9dd562912078.assets/image 22.png)
+  ![image.png](学生成绩信息管理系统+7843534d-ba8b-4665-8850-9dd562912078.assets/image22.png)
 
 - 添加学生的成绩信息
 
-  ![image.png](学生成绩信息管理系统+7843534d-ba8b-4665-8850-9dd562912078.assets/image 23.png)
+  ![image.png](学生成绩信息管理系统+7843534d-ba8b-4665-8850-9dd562912078.assets/image23.png)
 
 - 修改学生的成绩信息
 
-  ![image.png](学生成绩信息管理系统+7843534d-ba8b-4665-8850-9dd562912078.assets/image 24.png)
+  ![image.png](学生成绩信息管理系统+7843534d-ba8b-4665-8850-9dd562912078.assets/image24.png)
 
 ## 五、遇到的问题及解决方法
 
